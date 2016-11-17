@@ -37,5 +37,5 @@ ticker <- function(rest.time){
 }
 
 for(i in 1:80){
- ticker(60*5)  
+ ticker(30)  
 }
