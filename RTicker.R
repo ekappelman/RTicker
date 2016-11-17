@@ -2,7 +2,7 @@ library(httr)
 library(dplyr)
 source('DataFetch.R')
 
-Sys.sleep(75*60)
+Sys.sleep(73*60)
 
 res <- get.data()
 sdata <- as.vector(res[[1]])
