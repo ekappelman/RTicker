@@ -36,6 +36,6 @@ ticker <- function(rest.time){
   Sys.sleep(rest.time)
 }
 
-for(i in 1:78){
+for(i in 1:80){
  ticker(60*5)  
 }
