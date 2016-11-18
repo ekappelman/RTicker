@@ -2,7 +2,7 @@ library(httr)
 library(dplyr)
 source('DataFetch.R')
 
-Sys.sleep(73*60)
+Sys.sleep(75*60)
 
 res <- get.data()
 sdata <- as.vector(res[[1]])
@@ -37,5 +37,6 @@ ticker <- function(rest.time){
 }
 
 for(i in 1:80){
- ticker(30)  
+ ticker(5*60)  
 }
+save(stockdata.ask,stockdata.real.time.ask,file = "RealTimeData.rda")
