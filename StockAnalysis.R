@@ -31,12 +31,6 @@ library(vars)
 library(ggplot2)
 load("StockData.rda")
 
-ts <- ts(t(stock.mat))
-colnames(ts)
-ptm <- proc.time()
-model <- VAR(ts,p = 10)
-timer.time <- proc.time() - ptm
-
 cl <- Mclust(stock.mat,G = 1:9)
 stock.mat <- cbind(stock.mat,cl$classification)
 table(cl$classification)
