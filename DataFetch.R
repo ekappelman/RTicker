@@ -10,7 +10,6 @@ parse.data <- function(symbols,range){
   URL <- paste(base.URL,symbol.string,sep="")
   
   data <- GET(URL)
-  now <- date()
   bin <- content(data, "raw")
   writeBin(bin, "data.txt")
   

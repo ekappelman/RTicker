@@ -1,5 +1,4 @@
 library(httr)
-library(dplyr)
 library(jsonlite)
 source('DataFetch.R')
 
@@ -16,6 +15,6 @@ ticker <- function(rest.time){
 }
 
 for(i in 1:80){
-  frame.list <- c(suppressWarnings(ticker(5 * 60)),frame.list)
+  frame.list <- c(suppressWarnings(ticker(5*30)),frame.list)
 }
 save(frame.list,file = "RealTimeData.rda")
