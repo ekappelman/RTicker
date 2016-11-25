@@ -5,7 +5,6 @@ load("StockData.rda")
 
 cl <- Mclust(stock.mat,G = 1:9)
 stock.mat <- cbind(stock.mat,cl$classification)
-table(cl$classification)
 
 cluster <- stock.mat[stock.mat[,1002] == 6,1:1001]
 ts <- ts(t(cluster))

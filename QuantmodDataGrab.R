@@ -17,8 +17,8 @@ for(i in 1:length(smb)){
   vex <- as.numeric(getPrice(temp2))
   mat <- rbind(mat,vex)
 }
-names(stockList) <- names
 
+names(stockList) <- names
 stock.mat <- as.matrix(mat)
 row.names(stock.mat) <- stocks
 colnames(stock.mat) <- as.character(index(temp2))
